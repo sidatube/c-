@@ -1,0 +1,6 @@
+D:\T2008M_AP\T2008M_AP\bin\Debug\T2008M_AP.exe
+D:\T2008M_AP\T2008M_AP\bin\Debug\T2008M_AP.pdb
+D:\T2008M_AP\T2008M_AP\obj\Debug\T2008M_AP.csprojAssemblyReference.cache
+D:\T2008M_AP\T2008M_AP\obj\Debug\T2008M_AP.csproj.CoreCompileInputs.cache
+D:\T2008M_AP\T2008M_AP\obj\Debug\T2008M_AP.exe
+D:\T2008M_AP\T2008M_AP\obj\Debug\T2008M_AP.pdb
