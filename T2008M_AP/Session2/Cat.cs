@@ -2,9 +2,14 @@
 
 namespace T2008M_AP.Session2
 {
-    public class Cat : Animal
+    public class Cat : Animal,Ianimal,Icat
     {
-        public string Name;
+     public override void Running()
+     {
+      Console.WriteLine("Run");
+     }
+
+     public string Name;
         
         public void Nyannyan()
         {
@@ -28,6 +33,16 @@ namespace T2008M_AP.Session2
         public override void sleep()
         {
          Console.WriteLine("Nyan nyan nyan nyan nyan");
+        }
+
+        public void live()
+        {
+         Console.WriteLine("Live");
+        }
+
+        public void speak()
+        {
+         Console.WriteLine("Nyan nyannnnn");
         }
 
         public new void Eat()

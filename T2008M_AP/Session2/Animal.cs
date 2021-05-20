@@ -2,8 +2,9 @@
 
 namespace T2008M_AP.Session2
 {
-    public class Animal
+    public abstract class Animal
     {
+        public string kind;
         public void eat()
         {
             Console.WriteLine("Eat");
@@ -13,5 +14,6 @@ namespace T2008M_AP.Session2
             Console.WriteLine("sleep");
 
         }
+        public abstract void Running(); // abstract method
     }
 }

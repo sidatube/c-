@@ -11,18 +11,22 @@ namespace T2008M_AP.Lap.Lap1
         public double price;
         public int qty;
         public string img;
-        public ArrayList gallery = new ArrayList();
+        public string desc;
+        public List<string> gallery;
         public Product()
         {
+            gallery = new List<string>();
         }
 
-        public Product(int id, string name, double price, int qty)
+        public Product(int id, string name, double price, int qty, string img, string desc)
         {
             this.id = id;
             this.name = name;
             this.price = price;
             this.qty = qty;
-          
+            this.img = img;
+            this.desc = desc;
+            gallery = new List<string>();
         }
 
         public int GetId()
@@ -44,7 +48,7 @@ namespace T2008M_AP.Lap.Lap1
             gallery.Add("9a");
         }
 
-        public void test2(string a)
+        public void themanh(string a)
         {
             if (gallery.Count<10)
             {
@@ -56,7 +60,6 @@ namespace T2008M_AP.Lap.Lap1
                 Console.WriteLine("Đã có 10 ảnh vui lòng xóa đi rồi thử lại");
             }
         }
-        
         public void inanh()
         {
             int count = 0;
@@ -66,21 +69,16 @@ namespace T2008M_AP.Lap.Lap1
                 count++;
             }
         }
-        public void deleteimg(int x)
+        public void deleteimg(int img)
         {
-            gallery.RemoveAt(x);
+            gallery.RemoveAt(img);
             Console.WriteLine("Xóa thành công");
         }
-        public void oshirase()
+        public bool checkqty()
         {
-            if (qty==0)
-            {
-                Console.WriteLine("Hết hàng");
-            }
-            else
-            {
-                Console.WriteLine("Số lượng: "+qty);
-            }
+            if (qty > 0)
+                return true;
+            return false;
         }
 
         public void xoaanh()

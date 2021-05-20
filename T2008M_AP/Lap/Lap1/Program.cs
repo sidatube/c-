@@ -4,10 +4,10 @@
     {
         public static void Main(string[] args)
         {
-            Product p = new Product(1,"xzy",8000,3);
+            Product p = new Product(1,"xzy",8000,3,"as","acs");
             p.test();
-            p.test2("ba");
-            p.test2("ba2");
+            p.themanh("ba");
+            p.themanh("ba2");
             p.xoaanh();
             p.getInfo();
         }
