@@ -5,6 +5,7 @@ namespace T2008M_AP.Lap
     public delegate void Nhapso(int a, int b);
     public class HamDelegate
     {
+     
         public void Cong(int a, int b)
         {
             int c = a + b;
