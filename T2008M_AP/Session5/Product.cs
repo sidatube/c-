@@ -36,7 +36,6 @@ namespace T2008M_AP.Session5
             get => qty;
             set => qty = value;
         }
-
         public void UpdateStock()
         {
             if (Qty > 0)

@@ -13,6 +13,7 @@ namespace T2008M_AP.Lap.Lap1
         private int qty;
         private string img;
         private string desc;
+
         public List<string> gallery;
         public Product()
         {
@@ -71,13 +72,7 @@ namespace T2008M_AP.Lap.Lap1
             get => desc;
             set => desc = value;
         }
-
-        public int GetId()
-        {
-            return id;
-
-        }
-
+        
         public void test()
         {
             gallery.Add("1a");

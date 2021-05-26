@@ -7,41 +7,105 @@ namespace T2008M_AP.Lap.Lap3
     public delegate void InStockProduct();
     public class Cart
     {
-        public int id;
-        public string customer;
-        public double grandTotal;
+        private int id;
+        private string customer;
+        private double grandTotal;
+        private bool inStock;
+
         public List<Product> Productlist;
         public event InStockProduct CheckStockProduct;
-        public string city;
-        public string country;
+        public event InStockProduct CheckQty;
+        private string city;
+        private string country;
 
         public Cart()
         {
           Productlist = new List<Product>();
           if (CheckStockProduct==null)
           {
-              
+              CheckStockProduct += showlog;
+          }
+
+          if (CheckQty==null)
+          {
+              CheckQty += updatecart;
           }
         }
+        
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
 
-        public bool addPro(Product a)
+        public string Customer
+        {
+            get => customer;
+            set => customer = value;
+        }
+
+        public double GrandTotal
+        {
+            get => grandTotal;
+            set => grandTotal = value;
+        }
+
+        public bool InStock
+        {
+            get => inStock;
+            set => inStock = value;
+        }
+
+        public string City
+        {
+            get => city;
+            set => city = value;
+        }
+
+        public string Country
+        {
+            get => country;
+            set => country = value;
+        }
+
+        public void showlog()
+        {
+            Console.WriteLine("Sản phẩm đã được thêm ");
+        }
+        public void updatecart()
+        {
+            if (InStock)
+            {
+                Console.WriteLine("Đã thêm sản phẩm");
+            }
+            else
+            {
+                Console.WriteLine("Đã xóa sản phẩm");
+            }
+            
+        }
+        
+        public void addPro(Product a)
         {
             if (a.checkqty())
             {
                 Productlist.Add(a);
                 a.Qty = a.Qty - 1;
                 grandTotal = grandTotal + a.Price;
-                return true;
+                InStock = true;
+                CheckStockProduct();
+                return ;
             }
             Console.WriteLine("Fail!!");
-            return false;
 
-
-        } public void removePro(Product a)
+        }
+        public void removePro(Product a)
         {
             Productlist.Remove(a);
             a.Qty = a.Qty + 1;
             grandTotal = grandTotal - a.Price;
+            InStock = false;
+            CheckQty();
         }
 
         public void show()
@@ -69,5 +133,6 @@ namespace T2008M_AP.Lap.Lap3
             }
             Console.WriteLine(grandTotal);
         }
+        
     }
 }

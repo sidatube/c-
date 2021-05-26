@@ -12,8 +12,9 @@ namespace T2008M_AP.Lap.Lap3
             Product p3 = new Product(1, "Toy", 100000, 10, "img1", "desc");
 
             Cart c = new Cart();
-            c.city = "Hn";
-            c.country = "Vietnam";
+            c.Customer = "bbb";
+            c.City = "Hn";
+            c.Country = "Vietnam";
             c.addPro(p1);
             c.addPro(p1);
             c.addPro(p2);

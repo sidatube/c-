@@ -43,13 +43,13 @@
         <Compile Include="Lap\Lap3\Cart.cs" />
         <Compile Include="Lap\Lap5(ss4)\HamDelegate.cs" />
         <None Include="Lap\Lap5(ss4)\Program.cs" />
-        <Compile Include="Lap\Lap6\Program.cs" />
+        <None Include="Lap\Lap6\Program.cs" />
         <Compile Include="Session5\Product.cs" />
         <None Include="Session5\Program.cs" />
         <None Include="Session4\DemoDelegate.cs" />
         <Compile Include="Session4\DemoDelegate2.cs" />
         <None Include="Session4\Program.cs" />
-        <None Include="Lap\Lap3\Program.cs" />
+        <Compile Include="Lap\Lap3\Program.cs" />
         <Compile Include="Lap\Lap4\Hoadondien.cs" />
         <Compile Include="Lap\Lap4\Khachang.cs" />
         <Compile Include="Lap\Lap4\Ngoaiquoc.cs" />
