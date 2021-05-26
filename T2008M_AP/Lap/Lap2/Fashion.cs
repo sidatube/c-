@@ -16,7 +16,7 @@ namespace T2008M_AP.Lap.Lap2
 
         public bool checkhang(string c,string s)
         {
-            if (this.color.Equals(c) && color.Equals(s) && qty > 0)
+            if (this.color.Equals(c) && color.Equals(s) && Qty > 0)
                 return true;
             return false;
         }

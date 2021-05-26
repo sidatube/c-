@@ -42,7 +42,10 @@
         <Compile Include="Lap\Lap2\Fashion.cs" />
         <Compile Include="Lap\Lap3\Cart.cs" />
         <Compile Include="Lap\Lap5(ss4)\HamDelegate.cs" />
-        <Compile Include="Lap\Lap5(ss4)\Program.cs" />
+        <None Include="Lap\Lap5(ss4)\Program.cs" />
+        <Compile Include="Lap\Lap6\Program.cs" />
+        <Compile Include="Session5\Product.cs" />
+        <None Include="Session5\Program.cs" />
         <None Include="Session4\DemoDelegate.cs" />
         <Compile Include="Session4\DemoDelegate2.cs" />
         <None Include="Session4\Program.cs" />

@@ -4,18 +4,24 @@ using T2008M_AP.Lap.Lap1;
 
 namespace T2008M_AP.Lap.Lap3
 {
+    public delegate void InStockProduct();
     public class Cart
     {
         public int id;
         public string customer;
         public double grandTotal;
         public List<Product> Productlist;
+        public event InStockProduct CheckStockProduct;
         public string city;
         public string country;
 
         public Cart()
         {
           Productlist = new List<Product>();
+          if (CheckStockProduct==null)
+          {
+              
+          }
         }
 
         public bool addPro(Product a)
@@ -23,8 +29,8 @@ namespace T2008M_AP.Lap.Lap3
             if (a.checkqty())
             {
                 Productlist.Add(a);
-                a.qty = a.qty - 1;
-                grandTotal = grandTotal + a.price;
+                a.Qty = a.Qty - 1;
+                grandTotal = grandTotal + a.Price;
                 return true;
             }
             Console.WriteLine("Fail!!");
@@ -34,8 +40,8 @@ namespace T2008M_AP.Lap.Lap3
         } public void removePro(Product a)
         {
             Productlist.Remove(a);
-            a.qty = a.qty + 1;
-            grandTotal = grandTotal - a.price;
+            a.Qty = a.Qty + 1;
+            grandTotal = grandTotal - a.Price;
         }
 
         public void show()
@@ -43,7 +49,7 @@ namespace T2008M_AP.Lap.Lap3
             Console.WriteLine("Show cart");
             foreach (var x in Productlist)
             {
-                Console.WriteLine(x.name+" - "+x.price);
+                Console.WriteLine(x.Name+" - "+x.Price);
             }
         }
         public void total()

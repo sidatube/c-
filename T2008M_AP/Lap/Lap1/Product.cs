@@ -6,12 +6,13 @@ namespace T2008M_AP.Lap.Lap1
 {
     public class Product
     {
-        public int id;
-        public string name;
-        public double price;
-        public int qty;
-        public string img;
-        public string desc;
+        private int id;
+        private string name;
+        private double price;
+        private bool inStock;
+        private int qty;
+        private string img;
+        private string desc;
         public List<string> gallery;
         public Product()
         {
@@ -27,6 +28,48 @@ namespace T2008M_AP.Lap.Lap1
             this.img = img;
             this.desc = desc;
             gallery = new List<string>();
+        }
+
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
+
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+
+        public double Price
+        {
+            get => price;
+            set => price = value;
+        }
+
+        public bool InStock
+        {
+            get => inStock;
+            set => inStock = value;
+        }
+
+        public int Qty
+        {
+            get => qty;
+            set => qty = value;
+        }
+
+        public string Img
+        {
+            get => img;
+            set => img = value;
+        }
+
+        public string Desc
+        {
+            get => desc;
+            set => desc = value;
         }
 
         public int GetId()
@@ -79,6 +122,17 @@ namespace T2008M_AP.Lap.Lap1
             if (qty > 0)
                 return true;
             return false;
+        }
+        public void UpdateStock()
+        {
+            if (qty > 0)
+            {
+                InStock = true;
+            }
+            else
+            {
+                InStock = false;
+            }
         }
 
         public void xoaanh()
